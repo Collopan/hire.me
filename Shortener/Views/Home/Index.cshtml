@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <form action="/Home" method="post">
+        <div class="text-center">
+            <h1 class="display-4">Encurte sua URL</h1>
+        </div>
+        <br>
+        <div class="container">
+            <div class="input-group input-group-lg">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-lg">URL</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" name="_URL">
+            </div>
+
+            <br>
+
+            <div class="input-group input-group-lg">
+                <div class="input-group-prepend">
+                    <span class="input-group-text col-xs-3" id="inputGroup-sizing-lg">URL Personalizada</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" name="_CustomURL">
+            </div>
+
+            <br>
+
+            <button type="submit" name="btnSubmit" class="btn btn-primary">Confirmar</button>
+        </div>
+        <div class="text-center">
+            <h3 class="display-4">Sua URL encurtada</h3>
+        </div>
+        <div class="container">
+            <h5 class="text-center">@ViewBag.short_URL</h5>
+        </div>
+    </form>
+
